@@ -1,6 +1,15 @@
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  purge: {
+    mode: "all",
+    content: [
+      "./components/**/*.{js,ts,jsx,tsx,css}",
+      "./pages/**/*.{js,ts,jsx,tsx}",
+    ],
+    options: {
+      safelist: { deep: [/blur$/] },
+    },
+  },
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {},
   },
