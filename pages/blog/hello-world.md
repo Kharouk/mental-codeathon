@@ -1,7 +1,8 @@
 ---
 title: Hello World
 description: The first post is the most memorable one.
-updatedAt: 2021-04-06
+date: 2021-04-06
+readTime: 5
 ---
 
 # h1
