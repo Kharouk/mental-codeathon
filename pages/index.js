@@ -11,7 +11,7 @@ export default function Home({ posts }) {
             <span>{date}</span>
             <section>
               <p>{description}</p>
-              <span>{readTime}</span>
+              <span>{readTime} min. read</span>
             </section>
           </header>
         </article>
