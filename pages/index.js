@@ -1,22 +1,26 @@
 import fs from 'fs'
 import matter from 'gray-matter'
+import Layout from '../components/Layout';
 
 export default function Home({ posts }) {
   return (
-    <div>
-      {posts.map(({ frontmatter: { title, description, date, readTime } }) => (
-        <article key={title}>
-          <header>
-            <h3>{title}</h3>
-            <span>{date}</span>
+    <Layout>
+      <div>
+        {posts.map(({ frontmatter: { title, description, date, readTime } }) => (
+          <article key={title}>
+            <header>
+              <h3 className="mb-1 text-3xl font-bold text-red-600">{title}</h3>
+              <span className="block mb-2 text-sm italic">{date}</span>
+
+            </header>
             <section>
-              <p>{description}</p>
-              <span>{readTime} min. read</span>
+              <p className="mb-3">{description}</p>
+              <span className="block italic mb-8">{readTime} min. read</span>
             </section>
-          </header>
-        </article>
-      ))}
-    </div>
+          </article>
+        ))}
+      </div>
+    </Layout>
   )
 }
 
